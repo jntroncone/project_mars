@@ -13,6 +13,7 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import 'bootstrap'
+import "../stylesheets/application"
 import 'autosize'
 
 document.addEventListener("turbolinks:load", () => {
