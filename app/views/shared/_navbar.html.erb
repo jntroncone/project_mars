@@ -4,11 +4,11 @@
     <span class="navbar-toggler-icon"></span>
   </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!--<ul class="navbar-nav mr-auto">
-        <li class="nav-item <%#= active_class(quizzes_path) %>">
-            <%#= link_to 'Home', quizzes_path, class: 'nav-link' %>
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item <%= active_class(products_path) %>">
+            <%= link_to 'Home', products_path, class: 'nav-link' %>
         </li>
-        </ul> -->
+        </ul>
         <ul class="navbar-nav">
             <% if user_signed_in? %>
                 <li class="nav-item <%= active_class(edit_user_registration_path) %>">

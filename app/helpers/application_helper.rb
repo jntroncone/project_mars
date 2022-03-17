@@ -1,5 +1,4 @@
 module ApplicationHelper
-<<<<<<< HEAD
 
     def flash_class(level)
         bootstrap_alert_class = {
@@ -20,13 +19,4 @@ module ApplicationHelper
       end
     end
 
-=======
-    def active_class(path)
-        if request.path == path
-          return 'active'
-        else
-          return ''
-        end
-    end
->>>>>>> origin/Catalog
 end
