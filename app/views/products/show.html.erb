@@ -8,7 +8,7 @@
         <%= @product.description %>
       </p>
       <% if @cart.include?(@product)%>
-      <p> Product In Cart </p>
+      <p> <%= link_to 'Remove From Cart', remove_from_cart_path(@product.id), method: :delete%> </p>
       <% else %>
       <%= link_to 'Add to Cart', add_to_cart_path(@product.id), method: :post%>
       <% end %>
