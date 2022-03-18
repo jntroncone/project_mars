@@ -7,7 +7,11 @@
       <p>
         <%= @product.description %>
       </p>
-      Add to Cart
+      <% if @cart.include?(@product)%>
+      <p> Product In Cart </p>
+      <% else %>
+      <%= link_to 'Add to Cart', add_to_cart_path(@product.id), method: :post%>
+      <% end %>
     </div>
     <div class="card-footer">
       <%= link_to "Back to Product List", products_path%>

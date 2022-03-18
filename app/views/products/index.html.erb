@@ -1,3 +1,12 @@
 <div class="row">
 <%= render partial: "shared/product", collection: @products%>
+<details>
+    <summary>Shopping Cart</summary>
+    <ul>
+    <% @cart.each do |product| %>
+    <li><%= product.name %></li>
+    <% end %>
+    </ul>
+</details>
+<p> You have visited this site <%= pluralize @visit_count, 'time' %></p>
 </div>
