@@ -1,0 +1,16 @@
+<h1 class="jumbotron">Admin | Categories</h1>
+<div class="container">
+  <div class="row">
+    <%= link_to 'Add Category', new_admin_category_path %>
+    <div class="col-12 card">
+      <table class="table">
+        <thead>
+          <th>Name</th>
+        </thead>
+        <tbody>
+        </tbody>
+        <%= render partial: "admin_category", collection: @categories %>
+      </table>
+    </div>
+  </div>
+</div>

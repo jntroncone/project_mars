@@ -6,6 +6,11 @@ user1 = User.create!(
   role: "Sales Rep"
 )
 
+admin1 = Admin.create!(
+    email: "admin@email.com",
+    password: "password"
+)
+
 cat1 = Category.create!(
     name: 'tools'
 )

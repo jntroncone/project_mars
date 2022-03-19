@@ -7,11 +7,12 @@ Rails.application.routes.draw do
   get 'users/:id', to: 'users#show', as: 'user'
   
 
-  #namespace :admin do
-  #  root to: 'products#index'
-  #  resources :products, only: [:index, :new, :create, :edit, :update, :destroy]
-  #  resources :categories, only: [:index, :new, :create, :edit, :update, :destroy]
-  #end
+  namespace :admin do
+    root to: 'products#index'
+    resources :products, only: [:index, :new, :create, :edit, :update, :destroy]
+    resources :categories, only: [:index, :new, :create, :edit, :update, :destroy]
+  end
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'products#index'
   get 'products/add_to_cart/:id', to: 'products#add_to_cart', as: 'find_product_to_add_from_cart'

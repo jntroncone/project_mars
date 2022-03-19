@@ -1,0 +1,6 @@
+<tr>
+  <td><%=  admin_product.name  %></td>
+  <td><%=  admin_product.description  %></td>
+  <td><%= link_to 'Edit', edit_admin_product_path(admin_product) %></td>
+  <td><%= button_to 'Delete', admin_product_path(admin_product), method: :delete %></td>
+</tr>
