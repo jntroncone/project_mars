@@ -65,3 +65,4 @@ end
 gem 'bootstrap', '~> 5.1.3'
 # Replaces Rails form helpers with bootstrap-specific form helpers
 gem "bootstrap_form", "~> 4.0"
+gem 'devise'
