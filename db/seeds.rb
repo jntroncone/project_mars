@@ -5,16 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-cat1 = Category.create!(
-    name: 'tools'
-)
+
 item1 = Product.create!(
     name: 'scalpel',
-    description: 'it cuts or something',
-    category: cat1
+    description: 'it cuts or something'
 )
 item2 = Product.create!(
     name: 'stitches',
-    description: 'sew em up',
-    category: cat1
+    description: 'sew em up'
 )
