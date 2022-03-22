@@ -1,7 +1,5 @@
 class ProductsController < ApplicationController
-   before_action :initialize_session
-   before_action :increment_visit_count, only: %i[index product]
-   before_action :load_cart
+
     def show
         @product = Product.find(params[:id])
     end
@@ -10,29 +8,43 @@ class ProductsController < ApplicationController
         @products = Product.all
         render :index
     end
-    def add_to_cart
-        id= params[:id].to_i
-        session[:cart] << id unless session[:cart].include?(id)
-        redirect_to root_path
-    end
-    
-    def remove_from_cart
-        id = params[:id].to_i
-        session[:cart].delete(id)
-        redirect_to root_path
-    end
-    private
-    def initialize_session
-        session[:visit_count] ||=0
-        session[:cart]||=[]
+
+    def new
+        @product = Product.new
+        render :new
     end
 
-    def increment_visit_count
-        session[:visit_count] +=1
-        @visit_count = session[:visit_count]
+    def create
+        @product = Product.new(params.require(:product).permit(:name, :description))
+        if @product.save
+          flash[:success] = "New to-do item successfully added!"
+          redirect_to products_url
+        else
+          flash.now[:error] = "To-do item creation failed"
+          render :new
+        end
     end
 
-    def load_cart
-        @cart=Product.find(session[:cart])
+    def edit
+        @product = Product.find(params[:id])
+        render :edit
+    end
+
+    def update
+        @product = Product.find(params[:id])
+        if @product.update(params.require(:product).permit(:name, :description))
+          flash[:success] = "Product successfully updated."
+          redirect_to product_url(@product)
+        else
+          flash.now[:error] = "Product update failed."
+          render :edit
+        end
+    end
+
+    def destroy
+        @product = Product.find(params[:id])
+        @product.destroy
+        flash[:success] = "The product was successfully destroyed."
+        redirect_to products_url
     end
 end

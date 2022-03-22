@@ -11,16 +11,12 @@ admin1 = Admin.create!(
     password: "password"
 )
 
-cat1 = Category.create!(
-    name: 'tools'
-)
 item1 = Product.create!(
     name: 'scalpel',
-    description: 'it cuts or something',
-    category: cat1
+    description: 'it cuts or something'
 )
+
 item2 = Product.create!(
     name: 'stitches',
-    description: 'sew em up',
-    category: cat1
+    description: 'sew em up'
 )
