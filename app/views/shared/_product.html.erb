@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-body">
+    <div class="card-title">
+      <p>
+        <%= product.name %>
+      </p>
+    </div>
+    <div class="card-text">
+      <p>
+        <small> <%= product.description %></small>
+      </p>
+    </div>
+    <div class="card-footer">
+      <%= link_to "View", product_path(product), class: 'btn btn-primary' %>
+      <%= link_to "Edit", edit_product_path(product), class: 'btn btn-primary' %>
+      <%= button_to "Delete", product_path(product), method: :delete, class: 'btn btn-danger' %>
+    </div>
+  </div>
+</div>

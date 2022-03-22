@@ -1,0 +1,6 @@
+<h1> Edit product</h1>
+<%= bootstrap_form_with model: @product, url: product_path(@product), method: :patch, local: true do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_area :description %>
+  <%= f.submit %>
+<% end %>
