@@ -7,7 +7,10 @@
       <p>
         <%= @product.description %>
       </p>
-      Add to Cart
+      <p>
+        <%= @product.description %>
+        <%= button_to "Add to cart", line_items_path(@product.id)%>
+      </p>
     </div>
     <div class="card-footer">
       <%= link_to "Edit Product", edit_product_path(@product), class: 'btn btn-primary' %>

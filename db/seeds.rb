@@ -14,6 +14,7 @@ item1 = Product.create!(
 item2 = Product.create!(
     name: 'stitches',
     description: 'sew em up'
+)
 user1 = User.create!(
   email: "bob@email.com",
   password: "password",

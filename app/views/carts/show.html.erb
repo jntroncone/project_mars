@@ -1,0 +1,17 @@
+<h2>Cart show</h2>
+<ul>
+  <% @cart.line_items.each do |line_item| %>
+    <li>Item: <%= line_item.product.name %>/ Quantity: <%= line_item.quantity %>
+    <ul>
+      <li>
+        <%= link_to "+1", line_item_add_path(@line_item), method: :post %>
+        <%= link_to "-1", line_item_reduce_path(@line_item), method: :post %>
+      </li>
+      <li>
+        <%= link_to "Remove item", line_item_path(line_item), method: :delete %>
+      </li>
+    </ul>
+  <% end %>
+</ul>
+<%= link_to "Proceed to checkout", new_order_path %><br>
+<%= link_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"}
