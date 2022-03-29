@@ -9,7 +9,7 @@
 class Cart < ApplicationRecord
     has_many( 
         :line_items,
-        class_name: 'LineItems',
+        class_name: 'LineItem',
         foreign_key: 'line_item_id',
         inverse_of: :cart,
         dependent: :destroy)
