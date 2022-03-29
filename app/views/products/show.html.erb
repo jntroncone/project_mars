@@ -6,16 +6,16 @@
     <div class="card-body">
       <p>
         <%= @product.description %>
-      </p>
-      <% if @cart.include?(@product)%>
-      <p> <%= link_to 'Remove From Cart', remove_from_cart_path(@product.id), method: :delete%> </p>
-      <% else %>
-      <%= link_to 'Add to Cart', add_to_cart_path(@product.id), method: :post%>
-      <% end %>
+      <!---</p>
+      <%# if @cart.include?(@product)%>
+      <p> <%#= link_to 'Remove From Cart', remove_from_cart_path(@product.id), method: :delete%> </p>
+      <%# else %>
+      <%#= link_to 'Add to Cart', add_to_cart_path(@product.id), method: :post%>
+      <%# end %>--->
     </div>
     <div class="card-footer">
-      <%= link_to "Edit Product", edit_product_path(@product), class: 'btn btn-primary' %>
-      <%= button_to "Delete", product_path(@product), method: :delete, class: 'btn btn-danger' %>
+      <%#= link_to "Edit Product", edit_product_path(@product), class: 'btn btn-primary' %>
+      <%#= button_to "Delete", product_path(@product), method: :delete, class: 'btn btn-danger' %>
       <%= link_to "Back to Product List", products_path, class: 'btn btn-primary'%>
     </div>
   </div>
