@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'carts/show'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'products#index'
+<<<<<<< Updated upstream
 
   get 'products', to: 'products#index', as: 'products'
   get 'products/:id/edit', to: 'products#edit', as: 'edit_product'
@@ -13,6 +14,12 @@ Rails.application.routes.draw do
 
   get 'carts/:id', to: "carts#show", as: "cart"
   delete 'carts/:id', to: "carts#destroy"
+=======
+  resources :line_items
+  resources :carts
+  resources :products
+  
+>>>>>>> Stashed changes
 
   post 'line_items/:id/add', to: "line_items#add_quantity", as: "line_item_add"
   post 'line_items/:id/reduce', to: "line_items#reduce_quantity", as: "line_item_reduce"

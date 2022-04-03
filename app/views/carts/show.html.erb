@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <h2>Cart show</h2>
 <ul>
   <% @cart.line_items.each do |line_item| %>
@@ -15,3 +16,18 @@
 </ul>
 <%= link_to "Proceed to checkout", new_order_path %><br>
 <%= link_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"}
+=======
+<div class="keep-shopping pv1 mt4 has-text-right">
+  <%= link_to 'Keep Shopping', products_path, class: 'button is-warning' %>
+</div>
+<hr />
+<section class="section">
+  <%= render(@cart.line_items) %>
+
+  <div class="columns">
+    <div class="column">
+      <%= button_to 'Empty Cart', @cart, method: :delete, data: { confirm: "Are you sure? " }, class: "button is-danger" %>
+    </div>
+  </div>
+</section>
+>>>>>>> Stashed changes
