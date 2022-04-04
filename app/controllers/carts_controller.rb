@@ -1,16 +1,4 @@
 class CartsController < ApplicationController
-<<<<<<< Updated upstream
-  def show
-    @cart = @current_cart
-  end
-
-  def destroy
-    @cart = @current_cart
-    @cart.destroy
-    session[:cart_id] = nil
-    redirect_to root_path
-  end
-=======
     rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
     before_action :set_cart, only: [:show, :edit, :update, :destroy]
 
@@ -76,5 +64,4 @@ class CartsController < ApplicationController
       logger.error "Attempt to access invalid cart #{params[:id]}"
       redirect_to root_path, notice: "That cart doesn't exist"
     end
->>>>>>> Stashed changes
 end
