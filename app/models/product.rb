@@ -9,15 +9,6 @@
 #  updated_at  :datetime         not null
 #
 class Product < ApplicationRecord
-<<<<<<< Updated upstream
-    has_many(
-        :line_items,
-        class_name: 'LineItem',
-        foreign_key: 'lineitem_id',
-        inverse_of: :line_item,
-        dependent: :destroy
-    )
-=======
     validates :name, :description, presence: true
 
     before_destroy :not_referenced_by_any_line_item
@@ -32,5 +23,4 @@ class Product < ApplicationRecord
             throw :abort
         end
     end
->>>>>>> Stashed changes
 end

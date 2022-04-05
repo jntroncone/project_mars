@@ -8,12 +8,7 @@
         <%= @product.description %>
       </p>
       <p>
-<<<<<<< Updated upstream
-        <%= @product.description %>
-        <%= button_to "Add to cart", line_items_path(@product.id)%>
-=======
         <%= button_to 'Add to cart', line_items_path(product_id: @product), class: 'button is-warning add-to-cart' %>
->>>>>>> Stashed changes
       </p>
     </div>
     <div class="card-footer">

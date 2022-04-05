@@ -7,15 +7,6 @@
 #  updated_at :datetime         not null
 #
 class Cart < ApplicationRecord
-<<<<<<< Updated upstream
-    has_many( 
-        :line_items,
-        class_name: 'LineItems',
-        foreign_key: 'line_item_id',
-        inverse_of: :cart,
-        dependent: :destroy)
-    has_many :products, through: :line_items
-=======
     has_many :line_items, dependent: :destroy
 
     def add_product(product)
@@ -29,5 +20,4 @@ class Cart < ApplicationRecord
         current_item
     end
 
->>>>>>> Stashed changes
 end

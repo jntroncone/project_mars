@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< Updated upstream
-ActiveRecord::Schema.define(version: 2022_03_23_164518) do
-=======
 ActiveRecord::Schema.define(version: 2022_04_03_173149) do
->>>>>>> Stashed changes
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,25 +33,6 @@ ActiveRecord::Schema.define(version: 2022_04_03_173149) do
   end
 
   create_table "line_items", force: :cascade do |t|
-<<<<<<< Updated upstream
-    t.integer "quantity"
-    t.bigint "product_id", null: false
-    t.bigint "cart_id", null: false
-    t.bigint "order_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["cart_id"], name: "index_line_items_on_cart_id"
-    t.index ["order_id"], name: "index_line_items_on_order_id"
-    t.index ["product_id"], name: "index_line_items_on_product_id"
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.bigint "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-=======
     t.bigint "product_id", null: false
     t.bigint "cart_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -65,7 +42,12 @@ ActiveRecord::Schema.define(version: 2022_04_03_173149) do
     t.index ["product_id"], name: "index_line_items_on_product_id"
   end
 
->>>>>>> Stashed changes
+  create_table "orders", force: :cascade do |t|
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name", null: false
     t.text "description", null: false
@@ -89,9 +71,5 @@ ActiveRecord::Schema.define(version: 2022_04_03_173149) do
   end
 
   add_foreign_key "line_items", "carts"
-<<<<<<< Updated upstream
-  add_foreign_key "line_items", "orders"
-=======
->>>>>>> Stashed changes
   add_foreign_key "line_items", "products"
 end
