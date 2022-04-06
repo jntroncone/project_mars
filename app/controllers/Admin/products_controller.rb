@@ -11,13 +11,13 @@ class Admin::ProductsController < ApplicationController
     end
 
     def create
-        @product = Product.new(product_params)
+        @product = Product.new(params.require(:product).permit(:name, :description))
         if @product.save
-            @category_array = params.dig(:product, :category_ids)
-            @category_array.each do |cat|
-                @category = Category.find(cat)
-                @product.categories << @category
-            end
+            #@category_array = params.dig(:product, :category_ids)
+            #@category_array.each do |cat|
+                #@category = Category.find(cat)
+                #@product.categories << @category
+            #end
             flash[:notice] = "Product added!"
             redirect_to admin_products_path
         else
@@ -33,12 +33,12 @@ class Admin::ProductsController < ApplicationController
     def update
         @product = Product.find(params[:id])
         if @product.update(product_params)
-            @product.product_categories.destroy_all
-            @category_array = params.dig(:product, :category_ids)
-            @category_array.each do |cat|
-                @category = Category.find(cat)
-                @product.categories << @category
-            end
+            #@product.product_categories.destroy_all
+            #@category_array = params.dig(:product, :category_ids)
+            #@category_array.each do |cat|
+                #@category = Category.find(cat)
+                #@product.categories << @category
+            #end
             flash[:notice] = "Product updated!"
             redirect_to admin_products_path
         else
@@ -58,5 +58,4 @@ class Admin::ProductsController < ApplicationController
             params.require(:product).permit(:name, :description, :price)
         end
 
-    end
 end

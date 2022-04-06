@@ -1,0 +1,17 @@
+<h1 class="jumbotron">Edit a Product</h1>
+
+<div class="container">
+
+    <%= bootstrap_form_for [:admin, @product], class: "form-horizontal" do |f| %>
+
+        <%= f.text_field :name %>
+        <%= f.text_area :description %>
+        <!-- <%#= f.association :categories, collection: Category.all, as: :check_boxes, include_hidden: false %> -->
+
+        <%= f.button :submit %>
+    
+    <% end %>
+
+    <%= link_to 'Back to Product List', admin_products_path %>
+
+</div>
