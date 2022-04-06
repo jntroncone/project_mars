@@ -9,4 +9,5 @@
 #  updated_at  :datetime         not null
 #
 class Product < ApplicationRecord
+    validates :name, :description, presence: true
 end

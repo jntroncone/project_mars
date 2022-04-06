@@ -17,10 +17,10 @@ class ProductsController < ApplicationController
     def create
         @product = Product.new(params.require(:product).permit(:name, :description))
         if @product.save
-          flash[:success] = "New to-do item successfully added!"
+          flash[:success] = "New product successfully added!"
           redirect_to products_url
         else
-          flash.now[:error] = "To-do item creation failed"
+          flash.now[:error] = "Product creation failed"
           render :new
         end
     end
