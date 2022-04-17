@@ -17,6 +17,12 @@
                 <li class="nav-item">
                     <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
                 </li>
+                <li class="nav-item<%= active_class(products_path) %>">
+                    <%= link_to 'Product Catalog', products_path, class: 'nav-link'%>
+                </li>
+                <li class="nav-item<%= active_class(carts_path) %>">
+                    <%= link_to 'My Cart', carts_path, class: 'nav-link'%>
+                </li>
             <% else %>
                 <li class="nav-item <%= active_class(new_user_session_path) %>">
                     <%= link_to 'Sign In', new_user_session_path, class: 'nav-link' %>

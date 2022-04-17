@@ -1,0 +1,5 @@
+<tr>
+  <td><%= line_item.product.name %></td>
+  <td><%= line_item.quantity %></td>
+  <td><%= button_to 'Remove Item', line_item_path(line_item), method: :delete, class: "button is-small mb4" %></td> 
+</tr>
