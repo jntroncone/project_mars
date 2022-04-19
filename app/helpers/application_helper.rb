@@ -9,6 +9,7 @@ module ApplicationHelper
   def cart_has_items
     return @cart.line_items.count > 0
   end
+
     def flash_class(level)
         bootstrap_alert_class = {
           "success" => "alert-success",
