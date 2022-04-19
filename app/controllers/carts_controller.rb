@@ -3,12 +3,12 @@ class CartsController < ApplicationController
     before_action :set_cart, only: [:show, :edit, :update, :destroy]
 
     def index
-        cart = Cart.first
+        cart = @current_cart
         redirect_to cart_path(cart)
     end
 
     def show
-        cart = Cart.find(params[:id])
+        cart = @current_cart
         render :show
     end
 
