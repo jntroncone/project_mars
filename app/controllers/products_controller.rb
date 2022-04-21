@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
 
+    before_action :authenticate_admin!, except: [show, index]
+
     def show
         @product = Product.find(params[:id])
     end

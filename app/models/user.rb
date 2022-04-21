@@ -25,7 +25,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :products
-  has_one :cart, class_name: 'Cart', foreign_key: 'cart_id', inverse_of: :creator
   
 end
 
