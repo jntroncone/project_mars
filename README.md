@@ -14,7 +14,7 @@ password: password
 ## Installation:
 1. Go to your working directory/folder.
 2. Clone git repository at the following site :https://github.com/jntroncone/project_mars.git 
-3. run 'rails db:migrate:reset db:seed' and then rails server in terminal or command prompt.
+3. run 'rails db:migrate:reset db:seed' and then 'rails server' in terminal or command prompt.
 
 ## Resources:
 1. Installing Ruby: https://rails-demos-n-deets-2022.herokuapp.com/demos/development-environment
@@ -24,5 +24,9 @@ password: password
 ## Testing
 1. See: https://guides.rubyonrails.org/testing.html
 
+## Application:
+* ## Index <img src='app/assets/images/Index page.png'>
+* ## User Sign-in: username=bob@email.come password=password
+<img src='app/assets/images/User Sign-in page.png'>
 
 ## Issues
