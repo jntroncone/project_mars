@@ -1,7 +1,7 @@
 # README
 
 ## Goal:
-Create an application that allows for three types of users with different roles. Sales Rep role to search catalog, view products, add products to cart, then place order to be reviewed by Sales Manager. Sales Manager role to review submitted orders and decide to approve or decline order submitted by Sales Rep. Admin role is to add,delete, or edit products in catalog.
+Create an application that allows for three types of users with different roles. Sales Rep role to search catalog, view products, add products to their own cart, then place order to be reviewed by Sales Manager. Sales Manager role to review submitted orders and decide to approve or decline order submitted by Sales Rep. Admin role is to add,delete, or edit products in catalog.
 
 
 ## Requirements:
@@ -20,3 +20,9 @@ password: password
 1. Installing Ruby: https://rails-demos-n-deets-2022.herokuapp.com/demos/development-environment
 
 2. Running Applications: https://rails-demos-n-deets-2022.herokuapp.com/demos/running-apps
+
+## Testing
+1. See: https://guides.rubyonrails.org/testing.html
+
+
+## Issues
