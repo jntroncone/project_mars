@@ -1,7 +1,7 @@
 # README
 
 ## Goal:
-Create an application that allows for three types of users with different roles. Sales Rep role to search catalog, view products, add products to their own cart, then place order to be reviewed by Sales Manager. Sales Manager role to review submitted orders and decide to approve or decline order submitted by Sales Rep. Admin role is to add,delete, or edit products in catalog.
+Create an application that allows for three types of users with different roles. Sales Rep role to search catalog, view products, add products to their own cart, then place order to be reviewed by Sales Manager. Sales Manager role to review submitted orders and decide to approve or decline order submitted by Sales Rep. Admin role is to add,delete, or edit products in catalog. Each role should have a different view.
 
 
 ## Requirements:
@@ -15,6 +15,7 @@ password: password
 1. Go to your working directory/folder.
 2. Clone git repository at the following site :https://github.com/jntroncone/project_mars.git 
 3. run 'rails db:migrate:reset db:seed' and then 'rails server' in terminal or command prompt.
+4. Type in your browser url: 'localhost:3000'
 
 ## Resources:
 1. Installing Ruby: https://rails-demos-n-deets-2022.herokuapp.com/demos/development-environment
@@ -28,5 +29,7 @@ password: password
 * ## Index <img src='app/assets/images/Index page.png'>
 * ## User Sign-in: username=bob@email.come password=password
 <img src='app/assets/images/User Sign-in page.png'>
+
+* ## Cart View <img src='app/assets/images/Cart View Page.png'>
 
 ## Issues
