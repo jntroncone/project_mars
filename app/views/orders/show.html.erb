@@ -1,7 +1,15 @@
+<% if admin_signed_in? %>
+  <%= bootstrap_form_with model: @order, url: order_path(@order), method: :patch, local: true do |f| %>
+    <%= f.select :status, [['Approved'], ['Denied']] %>
+    <%= f.submit %>
+  <% end %>
+<% end %>
+
 <p> Order Number: <%= @order.id%></p>
 
-<p>Name: <%= order.name %></p>
-<p>Email: <%= order.email %></p>
+<p>Name: <%= @order.name %></p>
+<p>Email: <%= @order.email %></p>
+<p>Status: <%= @order.status%></p>
 
 <table class="table table-hover">
     <thead class="thead-dark">
