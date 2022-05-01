@@ -12,7 +12,7 @@
 
     <tbody>
       <%= render(@cart.line_items) %>
-
     </tbody>
   </table>
+  <p><%= link_to "Proceed to checkout", new_order_path %></p>
   <p><%= button_to 'Empty Cart', @cart, method: :delete, data: { confirm: "Are you sure? " }, class: "button is-danger" %></p>

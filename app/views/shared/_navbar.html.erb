@@ -23,6 +23,9 @@
                 <li class="nav-item<%= active_class(carts_path) %>">
                     <%= link_to 'My Cart', carts_path, class: 'nav-link'%>
                 </li>
+                <li class="nav-item<%= active_class(orders_path) %>">
+                    <%= link_to 'All Orders', orders_path, class: 'nav-link'%>
+                </li>    
             <% else %>
                 <li class="nav-item <%= active_class(new_user_session_path) %>">
                     <%= link_to 'Sign In', new_user_session_path, class: 'nav-link' %>

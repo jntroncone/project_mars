@@ -24,7 +24,7 @@ class CartsController < ApplicationController
 
         respond_to do |format|
             if @cart.save
-                format.html { redirect_to @cart, notice: 'Cart was successfully created.' }
+                format.html { redirect_to @cart}
                 format.json { render :show, status: :created, location: @cart }
             else
                 format.html { render :new }
@@ -36,7 +36,7 @@ class CartsController < ApplicationController
     def update
         respond_to do |format|
             if @cart.update(cart_params)
-                format.html { redirect_to @cart, notice: 'Cart was successfully updated.' }
+                format.html { redirect_to @cart}
                 format.json { render :show, status: :ok, location: @cart }
             else
                 format.html { render :edit }
@@ -49,7 +49,7 @@ class CartsController < ApplicationController
         @cart.destroy if @cart.id == session[:cart_id]
         session[:cart_id] = nil
         respond_to do |format|
-            format.html { redirect_to root_path, notice: 'Cart was successfully destroyed.' }
+            format.html { redirect_to root_path}
             format.json { head :no_content }
         end
     end

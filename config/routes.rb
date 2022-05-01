@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   delete 'line_items/:id' => "line_items#destroy"
   resources :carts
   resources :products
+  resources :orders
   
   devise_for :admins
   devise_for :users, :controllers => { registrations: 'users/registrations' }

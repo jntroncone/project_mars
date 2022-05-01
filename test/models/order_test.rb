@@ -3,9 +3,10 @@
 # Table name: orders
 #
 #  id         :bigint           not null, primary key
+#  email      :string
+#  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  user_id    :bigint
 #
 require "test_helper"
 

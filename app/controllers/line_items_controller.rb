@@ -22,7 +22,7 @@ class LineItemsController < ApplicationController
           format.html { redirect_to @line_item.cart}
           format.json { render :show, status: :created, location: @line_item }
         else
-          format.html { render :new }
+          format.html { redirect_to @line_item.cart }
           format.json { render json: @line_item.errors, status: :unprocessable_entity }
         end
       end
