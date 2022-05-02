@@ -3,6 +3,15 @@
 <% @orders.each do |order| %>
   <p>Name: <%= order.name %></p>
   <p>Email: <%= order.email %></p>
+  <p>Order Status: <% if admin_signed_in? %>
+    <%= bootstrap_form_with model: @order, url: order_path(@order), method: :patch, local: true do |f| %>
+      <%= f.select :status, [['Approved'], ['Denied'], ['In progress']] %>
+      <%= f.submit %>
+    <% end %>
+  <% else %>
+    <%= order.status %>
+  <% end %>  
+  </p>
   <p>Items: </p>
   <ul>
     <% order.line_items.each do |item| %>
