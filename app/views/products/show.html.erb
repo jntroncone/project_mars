@@ -8,7 +8,7 @@
         <%= @product.description %>
       </p>
       <p>
-        <%= button_to 'Add to cart', line_items_path(product_id: @product), class: 'button is-warning add-to-cart' %>
+        <%= button_to 'Add to cart', line_items_path(:product_id => @product.id), class: 'button is-warning add-to-cart' %>
       </p>
     </div>
     <div class="card-footer">

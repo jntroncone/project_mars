@@ -4,18 +4,18 @@ admin1 = Admin.create!(
 )
 
 item1 = Product.create!(
-    name: 'scalpel',
-    description: 'it cuts or something'
+    name: 'Test Item 1',
+    description: 'Description here'
 )
 
 item2 = Product.create!(
-    name: 'stitches',
-    description: 'sew em up'
+    name: 'Test Item 2',
+    description: 'Description here'
 )
 user1 = User.create!(
-  email: "bob@email.com",
+  email: "test@email.com",
   password: "password",
-  username: "Bob",
+  username: "TestUser",
   phone_number: "9019999999",
-  role: "Sales Rep"
+  role: "Sales Representative"
 )

@@ -2,17 +2,11 @@ class LineItemsController < ApplicationController
     def index
       @line_items = LineItem.all
     end
-  
-    def show
-    end
 
     def new
       @line_item = LineItem.new
     end
-  
-    def edit
-    end
-  
+
     def create
       @product = Product.find(params[:product_id])
       @line_item = @current_cart.add_product(@product)
@@ -27,6 +21,7 @@ class LineItemsController < ApplicationController
         end
       end
     end
+
 
     def update
       respond_to do |format|
@@ -45,6 +40,7 @@ class LineItemsController < ApplicationController
       @line_item.destroy
       redirect_to carts_url
     end
+
     def add_quantity
       @line_item = LineItem.find(params[:id])
       @line_item.quantity += 1
@@ -69,6 +65,6 @@ class LineItemsController < ApplicationController
       end
   
       def line_item_params
-        params.require(:line_item).permit(:product_id)
+        params.require(:line_item).permit(:product_id, :cart_id)
       end
 end
