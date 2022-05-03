@@ -7,7 +7,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  cart_id    :bigint           not null
-#  order_id   :bigint
+#  order_id   :bigint           not null
 #  product_id :bigint           not null
 #
 # Indexes
